@@ -5,14 +5,14 @@ import { useTable } from 'react-table'
 
 // Data
 import MOCK_DATA from './MOCK_DATA.json'
-import { COLUMNS } from './columns'
+import { COLUMNS, GROUPED_COLUMNS } from './columns'
 
 // Style
 import Style from './BasicTable.module.css'
 
 const BasicTable = () => {
   // memoization for the data
-  const columns = useMemo(() => COLUMNS, [])
+  const columns = useMemo(() => GROUPED_COLUMNS, [])
   const data = useMemo(() => MOCK_DATA, [])
 
   const {

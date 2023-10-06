@@ -1,6 +1,7 @@
 import { useTable } from 'react-table'
 import Style from './BasicTable.module.css'
 
+// eslint-disable-next-line react/prop-types
 const DynamicTable = ({ columns, data }) => {
   const {
     getTableProps,
