@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 
 // Hooks
-import { useTable } from 'react-table'
+import { useTable, useSortBy } from 'react-table'
 
 // Data
 import MOCK_DATA from './MOCK_DATA.json'
@@ -10,7 +10,7 @@ import { COLUMNS } from './columns'
 // Style
 import Style from './BasicTable.module.css'
 
-const BasicTable = () => {
+const SortingTable = () => {
   // memoization for the data
   const columns = useMemo(() => COLUMNS, [])
   const data = useMemo(() => MOCK_DATA, [])
@@ -22,10 +22,13 @@ const BasicTable = () => {
     footerGroups,
     rows,
     prepareRow,
-  } = useTable({
-    columns,
-    data,
-  })
+  } = useTable(
+    {
+      columns,
+      data,
+    },
+    useSortBy
+  )
 
   return (
     <div className={Style.wrapper}>
@@ -34,8 +37,18 @@ const BasicTable = () => {
           {headerGroups.map((headerGroup, index) => (
             <tr key={index} {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column, index) => (
-                <th key={index} {...column.getHeaderProps()}>
+                <th
+                  key={index}
+                  {...column.getHeaderProps(column.getSortByToggleProps())}
+                >
                   {column.render('Header')}
+                  <span>
+                    {column.isSorted
+                      ? column.isSortedDesc
+                        ? ' ⬇️'
+                        : ' ⬆️'
+                      : ' :'}
+                  </span>
                 </th>
               ))}
             </tr>
@@ -73,4 +86,4 @@ const BasicTable = () => {
   )
 }
 
-export default BasicTable
+export default SortingTable
