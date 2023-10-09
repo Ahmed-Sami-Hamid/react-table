@@ -1,6 +1,7 @@
 // import { useMemo } from 'react'
 import './App.css'
-import FilteringTable from './components/FilteringTable'
+// import FilteringTable from './components/FilteringTable'
+import PaginationTable from './components/PaginationTable'
 // import DynamicTable from './components/DynamicTable '
 // import MOCK_DATA from './components/MOCK_DATA.json'
 // import { COLUMNS } from './components/columns'
@@ -12,7 +13,8 @@ function App() {
     <>
       {/* <DynamicTable columns={columns} data={data} /> */}
       {/* <SortingTable /> */}
-      <FilteringTable />
+      {/* <FilteringTable /> */}
+      <PaginationTable />
     </>
   )
 }

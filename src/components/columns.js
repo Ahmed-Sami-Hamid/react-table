@@ -6,6 +6,7 @@ export const COLUMNS = [
     Footer: 'Id',
     accessor: 'id',
     Filter: ColumnFilter,
+    disableFilters: true,
   },
   {
     Header: 'First Name',
