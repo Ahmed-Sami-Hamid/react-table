@@ -66,12 +66,10 @@ const PaginationTable = () => {
       </table>
       <div>
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-          {' '}
           Previous
         </button>
         <button onClick={() => nextPage()} disabled={!canNextPage}>
-          {' '}
-          next
+          Next
         </button>
       </div>
     </div>
