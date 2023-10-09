@@ -25,6 +25,8 @@ const PaginationTable = () => {
     canNextPage,
     canPreviousPage,
     gotoPage,
+    pageSize,
+    setPageSize,
     pageCount,
     pageOptions,
     state,
@@ -79,7 +81,7 @@ const PaginationTable = () => {
         </span>
 
         <span>
-          | Go to page: {''}
+          {''} | Go to page: {''}
           <input
             type="number"
             defaultValue={pageIndex + 1}
@@ -89,6 +91,16 @@ const PaginationTable = () => {
             }}
             style={{ width: '50px' }}
           />
+          <select
+            value={pageSize}
+            onChange={(e) => setPageSize(Number(e.target.value))}
+          >
+            {[10, 25, 50].map((pageSize) => (
+              <option key={pageSize} value={pageSize}>
+                Show {pageSize}
+              </option>
+            ))}
+          </select>
         </span>
         <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
           {'<<'}
