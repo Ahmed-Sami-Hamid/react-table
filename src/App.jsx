@@ -1,6 +1,7 @@
 // import { useMemo } from 'react'
 import './App.css'
-import ColumnHiding from './components/ColumnHiding'
+// import ColumnHiding from './components/ColumnHiding'
+import StickyTable from './components/StickyTable'
 // import ColumnOrder from './components/ColumnOrder'
 // import FilteringTable from './components/FilteringTable'
 // import PaginationTable from './components/PaginationTable'
@@ -20,7 +21,8 @@ function App() {
       {/* <PaginationTable /> */}
       {/* <RowSelection /> */}
       {/* <ColumnOrder /> */}
-      <ColumnHiding />
+      {/* <ColumnHiding /> */}
+      <StickyTable />
     </>
   )
 }
