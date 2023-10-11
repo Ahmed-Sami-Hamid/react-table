@@ -1,6 +1,7 @@
 // import { useMemo } from 'react'
 import './App.css'
-import ColumnOrder from './components/ColumnOrder'
+import ColumnHiding from './components/ColumnHiding'
+// import ColumnOrder from './components/ColumnOrder'
 // import FilteringTable from './components/FilteringTable'
 // import PaginationTable from './components/PaginationTable'
 // import RowSelection from './components/RowSelection'
@@ -18,7 +19,8 @@ function App() {
       {/* <FilteringTable /> */}
       {/* <PaginationTable /> */}
       {/* <RowSelection /> */}
-      <ColumnOrder />
+      {/* <ColumnOrder /> */}
+      <ColumnHiding />
     </>
   )
 }
