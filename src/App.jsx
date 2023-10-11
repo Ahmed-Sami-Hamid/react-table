@@ -1,8 +1,9 @@
 // import { useMemo } from 'react'
 import './App.css'
+import ColumnOrder from './components/ColumnOrder'
 // import FilteringTable from './components/FilteringTable'
 // import PaginationTable from './components/PaginationTable'
-import RowSelection from './components/RowSelection'
+// import RowSelection from './components/RowSelection'
 // import DynamicTable from './components/DynamicTable '
 // import MOCK_DATA from './components/MOCK_DATA.json'
 // import { COLUMNS } from './components/columns'
@@ -16,7 +17,8 @@ function App() {
       {/* <SortingTable /> */}
       {/* <FilteringTable /> */}
       {/* <PaginationTable /> */}
-      <RowSelection />
+      {/* <RowSelection /> */}
+      <ColumnOrder />
     </>
   )
 }
